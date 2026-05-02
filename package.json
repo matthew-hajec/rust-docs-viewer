@@ -5,18 +5,32 @@
   "author": {
     "name": "matthew-hajec"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/matthew-hajec/rust-docs-viewer"
-  },
   "version": "1.0.0",
   "publisher": "MatthewHajec",
+  "license": "MIT",
+  "icon": "icon.png",
+  "keywords": [
+    "rust",
+    "documentation",
+    "rustbook",
+    "std",
+    "docs"
+  ],
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
-    "Other"
+    "Education",
+    "Programming Languages"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthew-hajec/rust-docs-viewer"
+  },
+  "bugs": {
+    "url": "https://github.com/matthew-hajec/rust-docs-viewer/issues"
+  },
+  "homepage": "https://github.com/matthew-hajec/rust-docs-viewer#readme",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
