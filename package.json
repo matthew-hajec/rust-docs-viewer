@@ -1,0 +1,58 @@
+{
+  "name": "rust-docs-viewer",
+  "displayName": "Rust Documentation Viewer",
+  "description": "View Rust Book and Standard Library documentation inside VS Code.",
+  "version": "1.0.0",
+  "publisher": "your-publisher-id",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rust-docs-viewer.openBook",
+        "title": "Rust: Open Rust Book"
+      },
+      {
+        "command": "rust-docs-viewer.openStd",
+        "title": "Rust: Open Standard Library Docs"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "rust-docs-viewer.openBook"
+        },
+        {
+          "command": "rust-docs-viewer.openStd"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4",
+    "@vscode/test-electron": "^2.3.0"
+  }
+}
